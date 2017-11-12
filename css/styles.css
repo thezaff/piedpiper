@@ -8,3 +8,11 @@ body::-webkit-scrollbar  {
  body::-webkit-scrollbar-track {
     background-color: #DBDBDB;
 }
+
+/* #branding {
+    color: #00D1B2;
+} */
+
+/***********************************REFERENCEs***********************************
+https://css-tricks.com/custom-scrollbars-in-webkit/ --SCROLLBAR 
+*/

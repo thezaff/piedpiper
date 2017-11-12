@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // NAVBAR SCROLL TOGGLING
+    // from:       https://codepen.io/philipbenton/pen/Ftmfz
     $(document).ready(function(){
         
         /** ===========================================
@@ -72,4 +73,17 @@ document.addEventListener('DOMContentLoaded', function () {
             $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
           }
         
+        });
+
+        $('button').click(function () {
+            $(this).css('background-color', 'black');
+        })
+
+
+        // https://michalsnik.github.io/aos/
+        AOS.init({
+          offset: 300,
+          duration: 900,
+          easing: 'ease-in-sine',
+          delay: 100,
         });
