@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // https://michalsnik.github.io/aos/
         AOS.init({
           offset: 200,
-          duration: 900,
+          duration: 300,
           easing: 'ease-in-sine',
-          delay: 100,
+          delay: 0,
         });
