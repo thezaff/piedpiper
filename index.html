@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">    
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="favicon.svg">
+    <link rel="icon" href="favicon.png">
 </head>
 <body>
        
     <nav class="navbar navbar is-fixed-top" data-nav-status="toggle">
         <div class="navbar-brand">
-            <a class="navbar-item" href="http://bulma.io">
-            <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+            <a class="navbar-item" href="index.html">
+                    <!-- <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28"> -->
+                    <p class="is-uppercase title"><i id="logo" class="fa fa-pied-piper-pp" aria-hidden="true"></i> PiedPiper</p>
             </a>
-        
             <div class="navbar-burger burger" data-target="navMenu">
             <span></span>
             <span></span>
@@ -27,51 +28,69 @@
         </div>
         
         <div id="navMenu" class="navbar-menu">
+
             <div class="navbar-end">
             
-            <a class="navbar-item" href="http://bulma.io/expo/">
-                <span class="bd-emoji">🎨</span> &nbsp;Home
+            <a class="navbar-item has-text-primary" href="index.html">
+                Home
             </a>
-            <a class="navbar-item " href="http://bulma.io/love/">
-                <span class="bd-emoji">❤️</span> &nbsp;About
+            <a class="navbar-item" href="about.html">
+                About
             </a>
-            <a class="navbar-item " href="http://bulma.io/love/">
-                <span class="bd-emoji">😎</span> &nbsp;Contact
+            <a class="navbar-item " href="services.html">
+                Services
             </a>
-            <a class="navbar-item " href="http://bulma.io/love/">
-                <span class="bd-emoji">🐸</span> &nbsp;Jobs
+            <a class="navbar-item " href="jobs.html">
+                Jobs
             </a>
-            <a class="navbar-item " href="http://bulma.io/love/">
-                <span class="bd-emoji">💩</span> &nbsp;Services
+            <a class="navbar-item " href="clients.html">
+                Clients
             </a>
-            <a class="navbar-item " href="http://bulma.io/love/">
-                <span class="bd-emoji">💩</span> &nbsp;Portfolio
+            <a class="navbar-item " href="portfolio.html">
+                Portfolio
             </a>
             </div>
+
         </div>
     </nav>
-    <section class="hero is-success is-fullheight is-bold">
+    <section class="hero is-success is-medium is-bold">
     <div class="hero-body">
         <div class="container">
             <div class="columns">
                 <div class="column is-three-quarters">
                     <h1 class="title is-1">
-                        Web-Development Studio Smart Solutions 
+                        Pied Piper. Web Development Studio 
                     </h1>
                     <h2 class="subtitle">
-                        Order free templates now!
+                        Request free consultancy now!
                     </h2>
                     <button class="button is-success is-large">Get in touch</button>
                     <button class="button is-warning is-large is-outlined">Order now</button>
                 </div>
                 <div class="column">
-                    <div class="box">
-                        <img src="https://cdn.dribbble.com/users/774095/screenshots/3939163/run_v01_instagram.gif" alt="" class="image">
-                    </div>
+                    <p><i id="showcase" class="fa fa-pied-piper-pp" aria-hidden="true"></i></p>
                 </div>
             </div>
         </div>
     </div>
+    </section>
+    <section class="hero is-small is-warning is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-pulled-center">
+                    More than ten years in the market
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="hero is-small is-dark is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-pulled-center">
+                    More than ten years in the market
+                </h1>
+            </div>
+        </div>
     </section>
     <div class="hero is-medium">
         <div class="hero-body">
@@ -86,7 +105,9 @@
                         </h2>
                     </div>
                     <div class="column">
-                        <div data-aos="fade-up"><img class="image" src="https://cdn.dribbble.com/users/774095/screenshots/3922085/jump_v01_dribbble.gif" alt=""></div>
+                        <div data-aos="fade-up">
+                            <p><i src="../icons/business-collection/svg/atm.svg" aria-hidden="true"></i></p> <!-- ИСПРАВИТЬ!!! -->
+                        </div>
                     </div>
                 </div>     
             </div>
@@ -119,9 +140,9 @@
         <div class="container">
             <div class="content has-text-centered">
             <p>
-                <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                <strong><p class="is-uppercase"><i  class="fa fa-pied-piper-pp" aria-hidden="true"></i> PiedPiper</p></strong> 
+                This website is developed to fullfill the requirements of WT Module.
+                Instagram Github Twitter
             </p>
             </div>
         </div>

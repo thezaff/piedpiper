@@ -9,9 +9,20 @@ body::-webkit-scrollbar  {
     background-color: #DBDBDB;
 }
 
-/* #branding {
+.navbar-brand {
+    font-size: 1.5rem;
+    font-family: 'Concert One', sans-serif;
+}
+
+#logo {
     color: #00D1B2;
-} */
+}
+
+#showcase {
+    font-size: 12rem;
+    
+}
+
 
 /***********************************REFERENCEs***********************************
 https://css-tricks.com/custom-scrollbars-in-webkit/ --SCROLLBAR 
