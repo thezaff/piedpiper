@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="favicon.png">
 </head>
@@ -50,7 +51,7 @@
                     <button class="button is-warning is-large is-outlined">Order now</button>
                 </div>
                 <div class="column block">
-                    <p><i id="showcase" class="fa fa-pied-piper-pp is-hidden-mobile" aria-hidden="true"></i></p>
+                    <p><i class="fa fa-pied-piper-pp is-hidden-mobile showcase-icon" aria-hidden="true"></i></p>
                 </div>
             </div>
         </div>
@@ -109,7 +110,15 @@
         </div>
     </div>
 
-
+    <div class="owl-carousel owl-theme">
+        <div class="box">dsa</div>
+        <div class="box">asd</div>
+        <div class="box">asd</div>
+        <div class="box">asd</div>
+        <div class="box">as</div>
+        <div class="box">ad</div>
+        <div class="box">sda</div>
+      </div>
 
 
     <footer class="hero hero-small">
@@ -130,6 +139,17 @@
         <!-- SCRIPTS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
         <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+        <script src="js/owl.carousel.js"></script>   
+        <script>
+            $('.custom1').owlCarousel({
+                animateOut: 'slideOutDown',
+                animateIn: 'flipInX',
+                items:1,
+                margin:30,
+                stagePadding:30,
+                smartSpeed:450
+            });
+            </script>
         <script src="js/scripts.js"></script>
         <script>
 

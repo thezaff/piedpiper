@@ -22,6 +22,9 @@
   </a>`
 ] */
 
+
+// ////////////////////// GENERATING NAVBAR DYNAMICALLY
+// store all navbar items in an array as objects
 var navItems = [
   {
     path : "index.html",
@@ -47,6 +50,7 @@ var navItems = [
     path : "contact.html",
     title : 'Contact&nbsp;<span class="bd-emoji">☎️</span>'
   }
+  /////// ADD YOUR NEW ITEM HERE
 ]
 
 for (var i = 0; i < navItems.length; i++) {
