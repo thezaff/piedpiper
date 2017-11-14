@@ -75,9 +75,62 @@ document.addEventListener('DOMContentLoaded', function () {
         
         });
 
-        $('button').click(function () {
-            $(this).css('background-color', 'black');
-        })
+
+        ////////////////////////// VALIDATION 
+        ////////////////////////// VALIDATION https://stackoverflow.com/questions/46155/how-to-validate-email-address-in-javascript
+        
+        function validate() {
+          // NAME VALIDATION STARTS
+          var name = $("#name-input").val();
+          if (name == '') {
+            $("#name-input").removeClass('is-success').addClass('is-danger');
+            $("#name-input-help").removeClass('is-success').addClass('is-danger').html('Please enter your name');
+            $("#name-input-icon").removeClass('fa-check').addClass('fa-warning');
+          } else {
+            $("#name-input").removeClass('is-danger').addClass('is-success');
+            $("#name-input-help").removeClass('is-danger').addClass('is-success').text('');
+            $("#name-input-icon").removeClass('fa-warning').addClass('fa-check');
+          }
+          
+          // MESSAGE (TEXT-AREA) VALIDATION STARTS
+          var message = $("#message-input").val().split(' ');
+          console.log(message);
+          if (message.length < 20) {
+            $("#message-input").removeClass('is-success').addClass('is-danger');
+            $("#message-input-help").removeClass('is-success').addClass('is-danger').html('Please make your message more informative');
+          } else {
+            $("#message-input").removeClass('is-danger').addClass('is-success');
+            $("#message-input-help").removeClass('is-danger').addClass('is-success').text('');
+          }
+
+          // EMAIl VALIDATION STARTS
+          function validateEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+          }
+
+          var email = $("#mail-input").val();
+          if (validateEmail(email)) {
+            $("#mail-input").removeClass('is-danger').addClass('is-success');
+            $("#mail-input-help").removeClass('is-danger').addClass('is-success').html('<i><b>' + email +'</b></i>' + ' is a valid email');
+            $("#mail-input-icon").removeClass('fa-warning').addClass('fa-check');
+          } else if (email == '') {
+            $("#mail-input").removeClass('is-success').addClass('is-danger');
+            $("#mail-input-help").removeClass('is-success').addClass('is-danger').html('Please enter your email that you will get response to');
+            $("#mail-input-icon").removeClass('fa-check').addClass('fa-warning');
+          } else {
+            $("#mail-input").removeClass('is-success').addClass('is-danger');
+            $("#mail-input-help").removeClass('is-success').addClass('is-danger').html('<i><b>' + email + '</b></i>' + ' is not valid email');
+            $("#mail-input-icon").removeClass('fa-check').addClass('fa-warning');
+          }
+          
+          return false;
+
+        }
+        
+        $("#submit").bind("click", validate);
+
+
 
 
         // https://michalsnik.github.io/aos/

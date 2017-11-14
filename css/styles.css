@@ -18,9 +18,9 @@ body::-webkit-scrollbar  {
     color: #00D1B2;
 }
 
-#showcase {
-    font-size: 12rem;
-    
+.showcase-icon {
+    font-size: 12rem
+    /* !important; */
 }
 
 /***********************************REFERENCEs***********************************
