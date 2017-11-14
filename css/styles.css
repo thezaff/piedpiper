@@ -23,6 +23,16 @@ body::-webkit-scrollbar  {
     /* !important; */
 }
 
+#address p {
+    margin-bottom: 1rem;
+}
+
+#address i {
+    margin-right: 1rem;
+}
+
+
+
 /***********************************REFERENCEs***********************************
 https://css-tricks.com/custom-scrollbars-in-webkit/ --SCROLLBAR 
 https://www.flaticon.com/packs/business-collection-3  --BUSINESS COLLECTION SVG ICONS

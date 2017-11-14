@@ -1,0 +1,25 @@
+{
+  "name": "piedpiper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thezaff/piedpiper.git"
+  },
+  "author": "00005744",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thezaff/piedpiper/issues"
+  },
+  "homepage": "https://github.com/thezaff/piedpiper#readme",
+  "dependencies": {
+    "bulma": "^0.6.1",
+    "bulma-pricingtable": "^0.1.0",
+    "jquery": "^3.2.1",
+    "owl.carousel": "^2.2.0"
+  }
+}
