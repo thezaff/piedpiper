@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pied Piper</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">    
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="favicon.png">
+    <script src="node_modules/jquery/dist/jquery.js"></script>    
+    <script src="js/links.js"></script>    
 </head>
 <body>
     <nav></nav>
@@ -31,27 +27,7 @@
 
             <div class="navbar-end">
             
-            <a class="navbar-item has-text-primary" href="index.html">
-                Home
-            </a>
-            <a class="navbar-item" href="about.html">
-                About
-            </a>
-            <a class="navbar-item " href="services.html">
-                Services
-            </a>
-            <a class="navbar-item " href="jobs.html">
-                Jobs
-            </a>
-            <a class="navbar-item " href="clients.html">
-                Clients
-            </a>
-            <a class="navbar-item " href="portfolio.html">
-                Portfolio
-            </a>
-            <a class="navbar-item has-text-weight-bold" href="contact.html">
-                Contact<span class="bd-emoji">☎️</span>
-            </a>
+           
             </div>
 
         </div>
@@ -79,8 +55,99 @@
     </section>
 
 
-
-
+    <div class="pricing-table">
+        <div class="pricing-plan">
+          <div class="plan-header">Starter</div>
+          <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>20</span>/month</div>
+          <div class="plan-items">
+            <div class="plan-item">20GB Storage</div>
+            <div class="plan-item">100 Domains</div>
+            <div class="plan-item">-</div>
+            <div class="plan-item">-</div>
+          </div>
+          <div class="plan-footer">
+            <button class="button is-fullwidth" disabled="disabled">Current plan</button>
+          </div>
+        </div>
+      
+        <div class="pricing-plan is-warning">
+          <div class="plan-header">Startups</div>
+          <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>40</span>/month</div>
+          <div class="plan-items">
+            <div class="plan-item">20GB Storage</div>
+            <div class="plan-item">25 Domains</div>
+            <div class="plan-item">1TB Bandwidth</div>
+            <div class="plan-item">-</div>
+          </div>
+          <div class="plan-footer">
+            <button class="button is-fullwidth">Choose</button>
+          </div>
+        </div>
+      
+        <div class="pricing-plan is-active">
+          <div class="plan-header">Growing Team</div>
+          <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>60</span>/month</div>
+          <div class="plan-items">
+            <div class="plan-item">200GB Storage</div>
+            <div class="plan-item">50 Domains</div>
+            <div class="plan-item">1TB Bandwidth</div>
+            <div class="plan-item">100 Email Boxes</div>
+          </div>
+          <div class="plan-footer">
+            <button class="button is-fullwidth">Choose</button>
+          </div>
+        </div>
+      
+        <div class="pricing-plan is-danger">
+          <div class="plan-header">Enterprise</div>
+          <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>100</span>/month</div>
+          <div class="plan-items">
+            <div class="plan-item">2TB Storage</div>
+            <div class="plan-item">100 Domains</div>
+            <div class="plan-item">1TB Bandwidth</div>
+            <div class="plan-item">1000 Email Boxes</div>
+          </div>
+          <div class="plan-footer">
+            <button class="button is-fullwidth">Choose</button>
+          </div>
+        </div>
+      </div>
+      <div class="timeline">
+        <header class="timeline-header">
+          <span class="tag is-medium is-primary">Start</span>
+        </header>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <p class="heading">January 2016</p>
+            <p>Timeline content - Can include any HTML element</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker is-image is-32x32">
+            <img src="http://bulma.io/images/placeholders/32x32.png">
+          </div>
+          <div class="timeline-content">
+            <p class="heading">February 2016</p>
+            <p>Timeline content - Can include any HTML element</p>
+          </div>
+        </div>
+        <header class="timeline-header">
+          <span class="tag is-primary">2017</span>
+        </header>
+        <div class="timeline-item">
+          <div class="timeline-marker is-icon">
+            <i class="fa fa-flag"></i>
+          </div>
+          <div class="timeline-content">
+            <p class="heading">March 2017</p>
+            <p>Timeline content - Can include any HTML element</p>
+          </div>
+        </div>
+        <div class="timeline-header">
+          <span class="tag is-medium is-primary">End</span>
+        </div>
+      </div>
 
 
     <div class="hero is-white is-small">

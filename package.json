@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/thezaff/piedpiper#readme",
   "dependencies": {
+    "aos": "^2.2.0",
     "bulma": "^0.6.1",
     "bulma-pricingtable": "^0.1.0",
+    "bulma-timeline": "^1.1.0",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "owl.carousel": "^2.2.0"
   }

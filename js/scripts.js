@@ -1,4 +1,69 @@
-    // NAVBAR HAMBURGER TOGGLE
+/* var navItems = [
+  `<a class="navbar-item has-text-primary" href="index.html">
+    Home
+  </a>`,
+  `<a class="navbar-item" href="about.html">
+    About
+  </a>`,
+  `<a class="navbar-item " href="services.html">
+    Services
+  </a>`,
+  `<a class="navbar-item " href="jobs.html">
+    Jobs
+  </a>`,
+  `<a class="navbar-item " href="clients.html">
+    Clients
+  </a>`,
+  `<a class="navbar-item " href="portfolio.html">
+    Portfolio
+  </a>`,
+  `<a class="navbar-item has-text-weight-bold" href="contact.html">
+    Contact&nbsp;<span class="bd-emoji">☎️</span>
+  </a>`
+] */
+
+var navItems = [
+  {
+    path : "index.html",
+    title : "Home"
+  },
+  {
+    path : "about.html",
+    title : "About"
+  },
+  {
+    path : "services.html",
+    title : "Services"
+  },
+  {
+    path : "career.html",
+    title : "Career"
+  },
+  {
+    path : "projects.html",
+    title : "Portfolio"
+  },
+  {
+    path : "contact.html",
+    title : 'Contact&nbsp;<span class="bd-emoji">☎️</span>'
+  }
+]
+
+for (var i = 0; i < navItems.length; i++) {
+  $('#navMenu > .navbar-end').append(`<a class="navbar-item" href="${navItems[i].path}">${navItems[i].title}</a>`);
+  // if (currentPath === navItems[i].path) {
+  // }
+}
+
+var $navItems = $('.nav-item');
+for (var i = 0; i < $navItems; i++) {
+  if (window.location.href === 'index.html') {
+    $navItems.addClass('has-text-primary');
+  }
+}
+
+
+// NAVBAR HAMBURGER TOGGLE
 document.addEventListener('DOMContentLoaded', function () {
     
       // Get all "navbar-burger" elements
