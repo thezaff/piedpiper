@@ -13,6 +13,7 @@
     <link rel="icon" href="favicon.png">
 </head>
 <body>
+    <nav></nav>
     <nav class="navbar navbar is-fixed-top" data-nav-status="toggle">
         <div class="navbar-brand">
             <a class="navbar-item" href="index.html">
@@ -20,7 +21,7 @@
                     <p class="is-uppercase title"><i id="logo" class="fa fa-pied-piper-pp" aria-hidden="true"></i> PiedPiper</p>
             </a>
             <div class="navbar-burger burger" data-target="navMenu">
-            <span></span>
+            <span></span> <!-- Burger menu toggle icon bars -->
             <span></span>
             <span></span>
             </div>
@@ -48,6 +49,9 @@
             <a class="navbar-item " href="portfolio.html">
                 Portfolio
             </a>
+            <a class="navbar-item has-text-weight-bold" href="contact.html">
+                Contact<span class="bd-emoji">☎️</span>
+            </a>
             </div>
 
         </div>
@@ -66,8 +70,8 @@
                     <button class="button is-success is-large">Get in touch</button>
                     <button class="button is-warning is-large is-outlined">Order now</button>
                 </div>
-                <div class="column">
-                    <p><i id="showcase" class="fa fa-pied-piper-pp" aria-hidden="true"></i></p>
+                <div class="column block">
+                    <p><i id="showcase" class="fa fa-pied-piper-pp is-hidden-mobile" aria-hidden="true"></i></p>
                 </div>
             </div>
         </div>
@@ -88,25 +92,25 @@
     <div class="hero is-medium">
         <div class="hero-body">
             <div class="container">
-                <div class="columns">
-                    <div class="column is-pulled-right">
+                <div class="columns" data-aos="fade-up">
+                    <div class="column has-text-left">
                         <h1 class="title is-1">
-                            Primary title
+                            Fast building
                         </h1>
                         <h2 class="subtitle">
-                            Primary subtitle
+                            We provide fast service based on maintenance of security<br> and covernance
                         </h2>
                     </div>
                     <div class="column">
-                        <div class="columns" data-aos="flip-down">
-                            <div class="column">
-                                <img class="image is-128x128" src="../icons/business-collection/png/time-passing.png" alt="svg image"> <!-- ИСПРАВИТЬ!!! -->
+                        <div class="columns">
+                            <div class="column is-inline-block-mobile">
+                                <img class="image is-128x128" src="icons/business-collection/png/time-passing.png" alt="svg image"> <!-- ИСПРАВИТЬ!!! -->
                             </div>
-                            <div class="column">
-                                <img class="image is-128x128" src="../icons/business-collection/png/rewind-time.png" alt="svg image">
+                            <div class="column is-inline-block-mobile">
+                                <img class="image is-128x128" src="icons/business-collection/png/rewind-time.png" alt="svg image">
                             </div>
-                            <div class="column">
-                                <img class="image is-128x128" src="../icons/business-collection/png/yen.png" alt="svg image">
+                            <div class="column is-inline-block-mobile">
+                                <img class="image is-128x128" src="icons/business-collection/png/yen.png" alt="svg image">
                             </div>
                         </div>
                     </div>
@@ -124,27 +128,70 @@
                 <h2 class="subtitle">
                     Primary subtitle
                 </h2>
-                <div data-aos="fade-up"><img class="image" src="https://cdn.dribbble.com/users/774095/screenshots/3922085/jump_v01_dribbble.gif" alt=""></div>
-                
+                <iframe src="https://yandex.ru/map-widget/v1/-/CBaBbCSZwC" width="560" height="400" frameborder="0"></iframe>
             </div>
         </div>            
     </div>
 
-    <div class="hero is-dark is-medium">
+    <div class="hero is-white is-small">
         <div class="hero-body">
-            <div class="container">
-                <h1>footer</h1>
+            <div class="container has-text-centered">
+                <div class="block has-text-centered">
+
+                    <a class="is-medium block button is-white has-text-primary" href="index.html">
+                        Home
+                    </a>
+                    <a class="is-medium block button is-white" href="about.html">
+                        About
+                    </a>
+                    <a class="is-medium block button is-white" href="services.html">
+                        Services
+                    </a>
+                    <a class="is-medium block button is-white" href="jobs.html">
+                        Jobs
+                    </a>
+                    <a class="is-medium block button is-white" href="clients.html">
+                        Clients
+                    </a>
+                    <a class="is-medium block button is-white" href="portfolio.html">
+                        Portfolio
+                    </a>
+                    <a class="is-medium block button is-primary has-text-weight-bol " href="contact.html">
+                        Contact  
+                        <!-- <span class="bd-emoji">☎️ </span> -->
+                    </a>
+                </div>
+                <div class="content columns">
+                    <div class="column">
+                        <a href="https://instagram.com/404/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://facebook.com/piedpiper/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/piedpiper/" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                        <a href="https://github.com/piedpiper/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="column">
+                        <p class="is-uppercase has-text-weight-bold"><i  class="fa fa-pied-piper-pp" aria-hidden="true"></i> PiedPiper</p>
+                    </div>
+                    <div class="column">
+                        <a href="https://bulma.io">
+                            <img src="https://bulma.io/images/made-with-bulma--black.png" alt="Made with Bulma" width="128" height="24">
+                        </a>
+                    </div>
+                </div>                
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="content has-text-centered">
-            <p>
-                <strong><p class="is-uppercase"><i  class="fa fa-pied-piper-pp" aria-hidden="true"></i> PiedPiper</p></strong> 
-                This website is developed to fullfill the requirements of WT Module.
-                Instagram Github Twitter
-            </p>
+    <footer class="hero hero-small">
+        <div class="hero-body">
+            <div class="container">
+                <div class="content">
+                    <p class="has-text-centered">
+                        This site was created to fulfill Web Technologies module’s requirements and does not
+                        represent actual company.
+                    </p>
+                    <p class="has-text-centered">
+                        <strong>#00005744</strong>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
