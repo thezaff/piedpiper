@@ -55,14 +55,6 @@ for (var i = 0; i < navItems.length; i++) {
   // }
 }
 
-var $navItems = $('.nav-item');
-for (var i = 0; i < $navItems; i++) {
-  if (window.location.href === 'index.html') {
-    $navItems.addClass('has-text-primary');
-  }
-}
-
-
 // NAVBAR HAMBURGER TOGGLE
 document.addEventListener('DOMContentLoaded', function () {
     
