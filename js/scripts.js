@@ -47,6 +47,10 @@ var navItems = [
     title : "Portfolio"
   },
   {
+    path : "clients.html",
+    title : "Clients"
+  },
+  {
     path : "contact.html",
     title : 'Contact&nbsp;<span class="bd-emoji">☎️</span>'
   }
@@ -209,9 +213,54 @@ document.addEventListener('DOMContentLoaded', function () {
         
         $("#submit").bind("click", validate);
 
+/////////////////////// COMMENTS 
+// COMMENT BODY
 
+$('#submitComment').click(function() {
+  // get element with id submitComment in document clients.html
+  var username = $('#username').val(); // get element with id username and store its value to variable username
+  var comment = $('#comment').val(); // get element with id comment and store its value to variable comment
+  var commentBody =  `<article class="media">
+                        <figure class="media-left">
+                            <p class="image is-64x64">
+                              <img src="https://bulma.io/images/placeholders/128x128.png">
+                            </p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content">
+                            <p>
+                                <strong>${username}</strong> <small>@username</small> <small>31m</small>
+                                <br>
+                                ${comment}
+                            </p>
+                            </div>
+                            <nav class="level is-mobile">
+                          <div class="level-left">
+                                <a class="level-item">
+                                <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                                </a>
+                                <a class="level-item">
+                                <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                                </a>
+                                <a class="level-item">
+                                <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                                </a>
+                            </div>
+                            </nav>
+                        </div>
+                    </article>` // body of the comment output containing template strings for username and comment itself
 
-        // https://michalsnik.github.io/aos/
-        AOS.init({
-          disable: 'mobile'
-        });
+  if (username !== '' && comment !== '') {
+    $('#comments').append(commentBody); // if values are not empty, then append the commentBody to #comments div
+    $('#comment').removeClass('is-danger'); // remove class of danger (red highlighning)
+    $('#username').removeClass('is-danger'); // if it was added in the next case
+  } else {
+    $('#comment').addClass('is-danger'); // give these inputs class of danger to highlight 
+    $('#username').addClass('is-danger');
+  }
+    });
+
+  // https://michalsnik.github.io/aos/
+  AOS.init({
+    disable: 'mobile'
+  });
