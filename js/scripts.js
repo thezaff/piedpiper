@@ -264,10 +264,11 @@ $('#submitComment').click(function() {
 
 
     /////////////////////// TABS
-    function switchToAll() {
+     /////////////////////// TABS
+     function switchToAll() {
       removeActive();
       hideAll();
-      $("#all-tab").addClass("is-active");
+      $(".all-tab").addClass("is-active");
       $("#websites-tab-content").removeClass("hidden");
       $("#webapps-tab-content").removeClass("hidden");
       $("#ui-tab-content").removeClass("hidden");
@@ -277,21 +278,21 @@ $('#submitComment').click(function() {
     function switchToWebsites() {
       removeActive();
       hideAll();
-      $("#websites-tab").addClass("is-active");
+      $(".websites-tab").addClass("is-active");
       $("#websites-tab-content").removeClass("hidden");
     }
 
     function switchToWebapps() {
       removeActive();
       hideAll();
-      $("#webapps-tab").addClass("is-active");
+      $(".webapps-tab").addClass("is-active");
       $("#webapps-tab-content").removeClass("hidden");
     }
 
     function switchToUI() {
       removeActive();
       hideAll();
-      $("#ui-tab").addClass("is-active");
+      $(".ui-tab").addClass("is-active");
       $("#ui-tab-content").removeClass("hidden");
     }
 
