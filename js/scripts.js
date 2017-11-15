@@ -145,7 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
         ////////////////////////// VALIDATION https://stackoverflow.com/questions/46155/how-to-validate-email-address-in-javascript
         
         function validate() {
-          var flag = true;
           // NAME VALIDATION STARTS
           function validateName(name) {
             var reName = /[A-Za-z]/;
@@ -161,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
             $("#name-input").removeClass('is-success').addClass('is-danger');
             $("#name-input-help").removeClass('is-success').addClass('is-danger').html('Please enter your name');
             $("#name-input-icon").removeClass('fa-check').addClass('fa-warning');
-            flag = false;
+            
           }
           
           // EMAIl VALIDATION STARTS
@@ -179,12 +178,12 @@ document.addEventListener('DOMContentLoaded', function () {
             $("#mail-input").removeClass('is-success').addClass('is-danger');
             $("#mail-input-help").removeClass('is-success').addClass('is-danger').html('Please enter your email that you will get response to');
             $("#mail-input-icon").removeClass('fa-check').addClass('fa-warning');
-            flag = false;
+            
           } else {
             $("#mail-input").removeClass('is-success').addClass('is-danger');
             $("#mail-input-help").removeClass('is-success').addClass('is-danger').html('<i><b>' + email + '</b></i>' + ' is not valid email');
             $("#mail-input-icon").removeClass('fa-check').addClass('fa-warning');
-            flag = false;
+            
           }
           
           // MESSAGE (TEXT-AREA) VALIDATION STARTS
@@ -193,25 +192,22 @@ document.addEventListener('DOMContentLoaded', function () {
           if (message.length < 20) {
             $("#message-input").removeClass('is-success').addClass('is-danger');
             $("#message-input-help").removeClass('is-success').addClass('is-danger').html('Please make your message more informative');
-            flag = false;            
+                        
           } else {
             $("#message-input").removeClass('is-danger').addClass('is-success');
             $("#message-input-help").removeClass('is-danger').addClass('is-success').text('');
           }
 
-            function redirect () {
-              if (flag === ture) {
-                window.location = 'index.html';
-              } 
-            }
+          // Redirect if all the fields are filled correct
+          if (validateName(name) && validateEmail(email) && message.length >= 20) {
+            window.location.href = "index.html";
+          }
           return false;
         }
-
-
-          
-
         
         $("#submit").bind("click", validate);
+
+
 
 /////////////////////// COMMENTS 
 // COMMENT BODY
@@ -264,51 +260,7 @@ $('#submitComment').click(function() {
 
 
     /////////////////////// TABS
-     /////////////////////// TABS
-    //  function switchToAll() {
-    //   removeActive();
-    //   hideAll();
-    //   $(".all-tab").addClass("is-active");
-    //   $("#websites-tab-content").removeClass("hidden");
-    //   $("#webapps-tab-content").removeClass("hidden");
-    //   $("#ui-tab-content").removeClass("hidden");
-      
-    // }
-
-    // function switchToWebsites() {
-    //   removeActive();
-    //   hideAll();
-    //   $(".websites-tab").addClass("is-active");
-    //   $("#websites-tab-content").removeClass("hidden");
-    // }
-
-    // function switchToWebapps() {
-    //   removeActive();
-    //   hideAll();
-    //   $(".webapps-tab").addClass("is-active");
-    //   $("#webapps-tab-content").removeClass("hidden");
-    // }
-
-    // function switchToUI() {
-    //   removeActive();
-    //   hideAll();
-    //   $(".ui-tab").addClass("is-active");
-    //   $("#ui-tab-content").removeClass("hidden");
-    // }
-
-    // function removeActive() {
-    //   $("li").each(function() {
-    //     $(this).removeClass("is-active");
-    //   });
-    // }
-
-    // function hideAll(){
-    //   $("#all-tab-content").addClass("hidden");
-    //   $("#websites-tab-content").addClass("hidden");
-    //   $("#webapps-tab-content").addClass("hidden");
-    //   $("#ui-tab-content").addClass("hidden");
-    // }
-
+  
     function switchToAll() {
       removeActive();
       hideAll();
