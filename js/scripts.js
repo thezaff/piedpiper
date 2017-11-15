@@ -265,13 +265,57 @@ $('#submitComment').click(function() {
 
     /////////////////////// TABS
      /////////////////////// TABS
-     function switchToAll() {
+    //  function switchToAll() {
+    //   removeActive();
+    //   hideAll();
+    //   $(".all-tab").addClass("is-active");
+    //   $("#websites-tab-content").removeClass("hidden");
+    //   $("#webapps-tab-content").removeClass("hidden");
+    //   $("#ui-tab-content").removeClass("hidden");
+      
+    // }
+
+    // function switchToWebsites() {
+    //   removeActive();
+    //   hideAll();
+    //   $(".websites-tab").addClass("is-active");
+    //   $("#websites-tab-content").removeClass("hidden");
+    // }
+
+    // function switchToWebapps() {
+    //   removeActive();
+    //   hideAll();
+    //   $(".webapps-tab").addClass("is-active");
+    //   $("#webapps-tab-content").removeClass("hidden");
+    // }
+
+    // function switchToUI() {
+    //   removeActive();
+    //   hideAll();
+    //   $(".ui-tab").addClass("is-active");
+    //   $("#ui-tab-content").removeClass("hidden");
+    // }
+
+    // function removeActive() {
+    //   $("li").each(function() {
+    //     $(this).removeClass("is-active");
+    //   });
+    // }
+
+    // function hideAll(){
+    //   $("#all-tab-content").addClass("hidden");
+    //   $("#websites-tab-content").addClass("hidden");
+    //   $("#webapps-tab-content").addClass("hidden");
+    //   $("#ui-tab-content").addClass("hidden");
+    // }
+
+    function switchToAll() {
       removeActive();
       hideAll();
       $(".all-tab").addClass("is-active");
-      $("#websites-tab-content").removeClass("hidden");
-      $("#webapps-tab-content").removeClass("hidden");
-      $("#ui-tab-content").removeClass("hidden");
+      $("#websites-tab-content").fadeIn();
+      $("#webapps-tab-content").fadeIn();
+      $("#ui-tab-content").fadeIn();
       
     }
 
@@ -279,21 +323,21 @@ $('#submitComment').click(function() {
       removeActive();
       hideAll();
       $(".websites-tab").addClass("is-active");
-      $("#websites-tab-content").removeClass("hidden");
+      $("#websites-tab-content").fadeIn();
     }
 
     function switchToWebapps() {
       removeActive();
       hideAll();
       $(".webapps-tab").addClass("is-active");
-      $("#webapps-tab-content").removeClass("hidden");
+      $("#webapps-tab-content").fadeIn();
     }
 
     function switchToUI() {
       removeActive();
       hideAll();
       $(".ui-tab").addClass("is-active");
-      $("#ui-tab-content").removeClass("hidden");
+      $("#ui-tab-content").fadeIn();
     }
 
     function removeActive() {
@@ -303,12 +347,11 @@ $('#submitComment').click(function() {
     }
 
     function hideAll(){
-      $("#all-tab-content").addClass("hidden");
-      $("#websites-tab-content").addClass("hidden");
-      $("#webapps-tab-content").addClass("hidden");
-      $("#ui-tab-content").addClass("hidden");
+      $("#all-tab-content").fadeOut();
+      $("#websites-tab-content").fadeOut();
+      $("#webapps-tab-content").fadeOut();
+      $("#ui-tab-content").fadeOut();
     }
-
 
   // https://michalsnik.github.io/aos/
   AOS.init({
