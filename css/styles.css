@@ -61,6 +61,9 @@ table caption {
     }
 }
 
+.is-flex-mobile {
+    margin-bottom: 0.5rem;
+}
 
 /***********************************REFERENCEs***********************************
 https://css-tricks.com/custom-scrollbars-in-webkit/ --SCROLLBAR 
