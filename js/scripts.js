@@ -258,7 +258,56 @@ $('#submitComment').click(function() {
     $('#comment').addClass('is-danger'); // give these inputs class of danger to highlight 
     $('#username').addClass('is-danger');
   }
+  $('#comment').val(' ');
+  $('#username').val(' ');
     });
+
+
+    /////////////////////// TABS
+    function switchToAll() {
+      removeActive();
+      hideAll();
+      $("#all-tab").addClass("is-active");
+      $("#websites-tab-content").removeClass("hidden");
+      $("#webapps-tab-content").removeClass("hidden");
+      $("#ui-tab-content").removeClass("hidden");
+      
+    }
+
+    function switchToWebsites() {
+      removeActive();
+      hideAll();
+      $("#websites-tab").addClass("is-active");
+      $("#websites-tab-content").removeClass("hidden");
+    }
+
+    function switchToWebapps() {
+      removeActive();
+      hideAll();
+      $("#webapps-tab").addClass("is-active");
+      $("#webapps-tab-content").removeClass("hidden");
+    }
+
+    function switchToUI() {
+      removeActive();
+      hideAll();
+      $("#ui-tab").addClass("is-active");
+      $("#ui-tab-content").removeClass("hidden");
+    }
+
+    function removeActive() {
+      $("li").each(function() {
+        $(this).removeClass("is-active");
+      });
+    }
+
+    function hideAll(){
+      $("#all-tab-content").addClass("hidden");
+      $("#websites-tab-content").addClass("hidden");
+      $("#webapps-tab-content").addClass("hidden");
+      $("#ui-tab-content").addClass("hidden");
+    }
+
 
   // https://michalsnik.github.io/aos/
   AOS.init({

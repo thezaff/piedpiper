@@ -35,7 +35,12 @@ body::-webkit-scrollbar  {
     font-size: 10rem;
 }
 
+.hidden {
+    display: none;
+}
 /***********************************REFERENCEs***********************************
 https://css-tricks.com/custom-scrollbars-in-webkit/ --SCROLLBAR 
 https://www.flaticon.com/packs/business-collection-3  --BUSINESS COLLECTION SVG ICONS
+https://www.flaticon.com/packs/online-marketing-elements
+https://www.flaticon.com/packs/seo-and-online-marketing-elements
 */

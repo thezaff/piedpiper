@@ -42,16 +42,16 @@
             <div class="columns">
                 <div class="column is-three-quarters">
                     <h1 class="title is-1">
-                        Career opportunities in Pied Piper 
+                        Portfolio 
                     </h1>
                     <h2 class="subtitle">
-                        Request free consultancy now!
+                        See the projects we have built
                     </h2>
                     <button class="button is-success is-large">Get in touch</button>
                     <button class="button is-warning is-large is-outlined">Order now</button>
                 </div>
                 <div class="column block">
-                    <p><i id="showcase" class="fa fa-pied-piper-pp is-hidden-mobile" aria-hidden="true"></i></p>
+                    <p><i class="fa fa-pied-piper-pp is-hidden-mobile showcase-icon" aria-hidden="true"></i></p>
                 </div>
             </div>
         </div>
@@ -59,8 +59,50 @@
     </section>
 
 
+    <div class="tabs is-centered">
+            <!-- https://stackoverflow.com/questions/44891771/bulma-css-tab-switcher -->
+           <ul>
+              <li class="all-tab is-active">
+                <a onclick="switchToAll()">
+                  <span class="icon is-small"><i class="fa fa-image"></i></span>
+                  <span>All</span>
+                </a>
+              </li>
+              <li class="websites-tab">
+                <a onclick="switchToWebsites()">
+                  <span class="icon is-small"><i class="fa fa-html5"></i></span>
+                  <span>Websites</span>
+                </a>
+              </li>
+              <li class="webapps-tab">
+                <a onclick="switchToWebapps()">
+                  <span class="icon is-small"><i class="fa fa-rocket"></i></span>
+                  <span>Web-apps</span>
+                </a>
+              </li>
+              <li class="ui-tab">
+                <a onclick="switchToUI()">
+                  <span class="icon is-small"><i class="fa fa-pencil"></i></span>
+                  <span>UI/UX Design</span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-
+          <div class="container">
+            <div id="all-tab-content">
+                <h1 class="title is-1">Images for first tab</h1>
+            </div>
+            <div class="hidden" id="websites-tab-content">
+                <h1 class="title is-1">Here will be the contents of the "Websites" tab</h1>
+            </div>
+            <div class="hidden" id="webapps-tab-content">
+                <h1 class="title is-1">Here will be the contents of the "Webapps" tab</h1>
+            </div>
+            <div class="hidden" id="ui-tab-content">
+                <h1 class="title is-1">Here will be the contents of the "UI UX DESIGN STUFF" tab</h1>
+            </div>
+        </div>
 
 
     <div class="hero is-white is-small">
