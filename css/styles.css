@@ -66,12 +66,29 @@ table caption {
     .column-padded p {
         font-size: 1.5rem;
     }
-
+    #success-message {
+        font-size: 4rem;
+        color: #00D1B2;
+        padding-top: 10%;
+        text-align: center;
+    }
+    #success-message i {
+        font-size: 8rem;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .column-padded p, .column-padded h1 {
         text-align: center;
+    }
+    #success-message {
+        font-size: 3rem;
+        color: #00D1B2;
+        padding-top: 15%;
+        text-align: center;
+    }
+    #success-message i {
+        font-size: 5rem;
     }
 }
 
@@ -91,6 +108,31 @@ table caption {
 .criterias li {
     list-style-type: square;
     list-style-position: inside;    
+}
+
+#not-found-page {
+    height: 100vh;
+    width: 100vw;
+    background-color: #2a2a39;
+}
+
+#not-found-message {
+    font-size: 7rem;
+    color: #f75454;
+    padding-top: 15%;
+    text-align: center;
+  }
+
+#success-page {
+    height: 100vh;
+    width: 100vw;
+    background-color: #2a2a39;
+}
+
+
+
+#redirect-text {
+    color: rgb(146, 146, 146);
 }
 /***********************************REFERENCEs***********************************
 https://css-tricks.com/custom-scrollbars-in-webkit/ --SCROLLBAR 

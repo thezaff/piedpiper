@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
           // Redirect if all the fields are filled correct
           if (validateName(name) && validateEmail(email) && message.length >= 20) {
-            window.location.href = "index.html";
+            window.location.href = "success.html";
           }
           return false;
         }
