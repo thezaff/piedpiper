@@ -53,16 +53,39 @@ table caption {
  /* .about-page div img {
     height: 10rem;
 }  */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
     .is-two-fifth img {
         margin-left: 15%;
         height: 300px;
         width: 300px;
     }
+
+    .column-padded {
+        padding: 150px;
+    }
+    .column-padded p {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .column-padded p, .column-padded h1 {
+        text-align: center;
+    }
+}
+
+.column-padded .button {
+    margin-top: 1.5rem;
 }
 
 .is-flex-mobile {
     margin-bottom: 7px;
+}
+
+
+.step-icons {
+    font-size: 5rem;
 }
 
 /***********************************REFERENCEs***********************************
@@ -71,3 +94,4 @@ https://www.flaticon.com/packs/business-collection-3  --BUSINESS COLLECTION SVG 
 https://www.flaticon.com/packs/online-marketing-elements
 https://www.flaticon.com/packs/seo-and-online-marketing-elements
 */
+
