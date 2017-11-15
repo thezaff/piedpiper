@@ -39,16 +39,16 @@ var navItems = [
     title : "Services"
   },
   {
-    path : "career.html",
-    title : "Career"
-  },
-  {
     path : "projects.html",
     title : "Portfolio"
   },
   {
     path : "clients.html",
     title : "Clients"
+  },
+  {
+    path : "career.html",
+    title : "Career"
   },
   {
     path : "contact.html",
