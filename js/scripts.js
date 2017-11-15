@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         });
 
-
+        
         ////////////////////////// VALIDATION 
         ////////////////////////// VALIDATION https://stackoverflow.com/questions/46155/how-to-validate-email-address-in-javascript
         

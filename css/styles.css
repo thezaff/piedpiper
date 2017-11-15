@@ -38,6 +38,21 @@ body::-webkit-scrollbar  {
 .hidden {
     display: none;
 }
+
+
+
+ /* .about-page div img {
+    height: 10rem;
+}  */
+@media only screen and (min-width: 768px) {
+    .is-two-fifth img {
+        margin-left: 15%;
+        height: 300px;
+        width: 300px;
+    }
+}
+
+
 /***********************************REFERENCEs***********************************
 https://css-tricks.com/custom-scrollbars-in-webkit/ --SCROLLBAR 
 https://www.flaticon.com/packs/business-collection-3  --BUSINESS COLLECTION SVG ICONS
