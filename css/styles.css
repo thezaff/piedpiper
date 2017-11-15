@@ -39,8 +39,17 @@ body::-webkit-scrollbar  {
     display: none;
 }
 
+.service .fa-html5, .service .fa-database, .service .fa-mobile {
+    font-size: 15rem;
+}
 
+table {
+    margin-top: 2rem;
+}
 
+table caption {
+    margin-bottom: 0.5rem;
+}
  /* .about-page div img {
     height: 10rem;
 }  */
