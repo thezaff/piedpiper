@@ -88,6 +88,10 @@ table caption {
     font-size: 5rem;
 }
 
+.criterias li {
+    list-style-type: square;
+    list-style-position: inside;    
+}
 /***********************************REFERENCEs***********************************
 https://css-tricks.com/custom-scrollbars-in-webkit/ --SCROLLBAR 
 https://www.flaticon.com/packs/business-collection-3  --BUSINESS COLLECTION SVG ICONS
