@@ -11,7 +11,7 @@ body::-webkit-scrollbar  {
 
 .navbar-brand {
     font-size: 1.5rem;
-    font-family: 'Concert One', sans-serif;
+    font-family: 'Concert One', 'Impact', sans-serif;
 }
 
 #logo {
