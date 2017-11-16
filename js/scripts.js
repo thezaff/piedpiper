@@ -1,26 +1,3 @@
-/* var navItems = [
-  `<a class="navbar-item has-text-primary" href="index.html">
-    Home
-  </a>`,
-  `<a class="navbar-item" href="about.html">
-    About
-  </a>`,
-  `<a class="navbar-item " href="services.html">
-    Services
-  </a>`,
-  `<a class="navbar-item " href="jobs.html">
-    Jobs
-  </a>`,
-  `<a class="navbar-item " href="clients.html">
-    Clients
-  </a>`,
-  `<a class="navbar-item " href="portfolio.html">
-    Portfolio
-  </a>`,
-  `<a class="navbar-item has-text-weight-bold" href="contact.html">
-    Contact&nbsp;<span class="bd-emoji">☎️</span>
-  </a>`
-] */
 
 
 // ////////////////////// GENERATING NAVBAR DYNAMICALLY
@@ -59,8 +36,7 @@ var navItems = [
 
 for (var i = 0; i < navItems.length; i++) {
   $('#navMenu > .navbar-end').append(`<a class="navbar-item" href="${navItems[i].path}">${navItems[i].title}</a>`);
-  // if (currentPath === navItems[i].path) {
-  // }
+// iterate through the array of navbar item objects and append those to element with id #navMenu and class .navbar-end
 }
 
 // NAVBAR HAMBURGER TOGGLE
@@ -92,22 +68,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // NAVBAR SCROLL TOGGLING
-    // from:       https://codepen.io/philipbenton/pen/Ftmfz
+    // function borrowed from and adapted:       https://codepen.io/philipbenton/pen/Ftmfz
     $(document).ready(function(){
-        
-        /** ===========================================
-            Hide / show the master navigation menu
-        ============================================ */
-        
-          // console.log('Window Height is: ' + $(window).height());
-          // console.log('Document Height is: ' + $(document).height());
-        
           var previousScroll = 0;
         
           $(window).scroll(function(){
-        
             var currentScroll = $(this).scrollTop();
-        
             /*
               If the current scroll position is greater than 0 (the top) AND the current scroll position is less than the document height minus the window height (the bottom) run the navigation if/else statement.
             */
@@ -128,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function () {
               */
               previousScroll = currentScroll;
             }
-        
           });
         
           function hideNav() {
@@ -142,20 +107,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
         
         ////////////////////////// VALIDATION 
-        ////////////////////////// VALIDATION https://stackoverflow.com/questions/46155/how-to-validate-email-address-in-javascript
+        ////////////////////////// VALIDATION 
+        // Regular Expressions for email validation are borrowed from
+        // https://stackoverflow.com/questions/46155/how-to-validate-email-address-in-javascript
         
         function validate() {
           // NAME VALIDATION STARTS
           function validateName(name) {
-            var reName = /[A-Za-z]/;
+          var reName = /[A-Za-z]/; // all english letters can be accepted, no symbols
             return reName.test(name);
           }
 
-          var name = $("#name-input").val();
-          if (validateName(name)) {
-            $("#name-input").removeClass('is-danger').addClass('is-success');
-            $("#name-input-help").removeClass('is-danger').addClass('is-success').text('');
-            $("#name-input-icon").removeClass('fa-warning').addClass('fa-check');
+          var name = $("#name-input").val(); // take value of element with id name-input and store into variable
+          if (validateName(name)) { //if value of name is true for validateName(), then
+            $("#name-input").removeClass('is-danger').addClass('is-success'); // input border color
+            $("#name-input-help").removeClass('is-danger').addClass('is-success').text(''); // small text under the input
+            $("#name-input-icon").removeClass('fa-warning').addClass('fa-check'); // icon on the right side inside the input
           } else {
             $("#name-input").removeClass('is-success').addClass('is-danger');
             $("#name-input-help").removeClass('is-success').addClass('is-danger').html('Please enter your name');
@@ -164,17 +131,17 @@ document.addEventListener('DOMContentLoaded', function () {
           }
           
           // EMAIl VALIDATION STARTS
-          function validateEmail(email) {
+          function validateEmail(email) { //Regular expressions neede for email validation
             var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);
           }
 
-          var email = $("#mail-input").val();
-          if (validateEmail(email)) {
-            $("#mail-input").removeClass('is-danger').addClass('is-success');
-            $("#mail-input-help").removeClass('is-danger').addClass('is-success').html('<i><b>' + email +'</b></i>' + ' is a valid email');
-            $("#mail-input-icon").removeClass('fa-warning').addClass('fa-check');
-          } else if (email == '') {
+          var email = $("#mail-input").val(); // get element with id mail-input and store its value to email variable
+          if (validateEmail(email)) { // if email is true for validateEmail(), then
+            $("#mail-input").removeClass('is-danger').addClass('is-success'); // input border color change
+            $("#mail-input-help").removeClass('is-danger').addClass('is-success').html('<i><b>' + email +'</b></i>' + ' is a valid email'); // small text under input indicating that typed email is not valid
+            $("#mail-input-icon").removeClass('fa-warning').addClass('fa-check'); // status icon in the input
+          } else if (email == '') { //if email value is an empty string, then
             $("#mail-input").removeClass('is-success').addClass('is-danger');
             $("#mail-input-help").removeClass('is-success').addClass('is-danger').html('Please enter your email that you will get response to');
             $("#mail-input-icon").removeClass('fa-check').addClass('fa-warning');
@@ -188,8 +155,8 @@ document.addEventListener('DOMContentLoaded', function () {
           
           // MESSAGE (TEXT-AREA) VALIDATION STARTS
           
-          var message = $("#message-input").val().split(' ');
-          if (message.length < 20) {
+          var message = $("#message-input").val().split(' '); // get value of element with id message-input, split it into array by spaces and store in message var
+          if (message.length < 20) { // if the length of array is less than 20 (20 separate words), then 
             $("#message-input").removeClass('is-success').addClass('is-danger');
             $("#message-input-help").removeClass('is-success').addClass('is-danger').html('Please make your message more informative');
                         
@@ -199,17 +166,17 @@ document.addEventListener('DOMContentLoaded', function () {
           }
 
           // Redirect if all the fields are filled correct
-          if (validateName(name) && validateEmail(email) && message.length >= 20) {
-            window.location.href = "success.html";
+          if (validateName(name) && validateEmail(email) && message.length >= 20) { //if validateName(name) and validateEmail(email) and at the same time message>=20 is true
+            window.location.href = "success.html"; //change location of browser window to
           }
           return false;
         }
         
-        $("#submit").bind("click", validate);
+        $("#submit").bind("click", validate); // get element with id submit and add event listener (validate function) on click 
 
 
 
-/////////////////////// COMMENTS 
+/////////////////////// COMMENT FUNCTIONALITY ON CLIENTS.HTML
 // COMMENT BODY
 
 $('#submitComment').click(function() {
@@ -259,53 +226,53 @@ $('#submitComment').click(function() {
     });
 
 
-    /////////////////////// TABS
+    /////////////////////// TABS ON PROJECTS.HTML
   
-    function switchToAll() {
-      removeActive();
-      hideAll();
-      $(".all-tab").addClass("is-active");
-      $("#websites-tab-content").fadeIn();
+    function switchToAll() { // 'all' tab function
+      removeActive(); // Remove active classes from all tab li elements elements
+      hideAll(); // hid all tab-contents
+      $(".all-tab").addClass("is-active"); // add all tabs active class
+      $("#websites-tab-content").fadeIn(); // fade in all tab contents
       $("#webapps-tab-content").fadeIn();
       $("#ui-tab-content").fadeIn();
       
     }
 
-    function switchToWebsites() {
+    function switchToWebsites() { // switch to websites tab-content 
       removeActive();
-      hideAll();
+      hideAll(); //
       $(".websites-tab").addClass("is-active");
       $("#websites-tab-content").fadeIn();
     }
 
-    function switchToWebapps() {
+    function switchToWebapps() { // switch to web-apps tab-content 
       removeActive();
       hideAll();
       $(".webapps-tab").addClass("is-active");
       $("#webapps-tab-content").fadeIn();
     }
 
-    function switchToUI() {
+    function switchToUI() { // switch to ui/ux tab-content 
       removeActive();
       hideAll();
       $(".ui-tab").addClass("is-active");
       $("#ui-tab-content").fadeIn();
     }
 
-    function removeActive() {
+    function removeActive() { //remove all active classes function
       $("li").each(function() {
         $(this).removeClass("is-active");
       });
     }
 
-    function hideAll(){
-      $("#all-tab-content").fadeOut();
+    function hideAll(){ //hide all tab-contents function
+      $("#all-tab-content").fadeOut(); //fadeout all 
       $("#websites-tab-content").fadeOut();
       $("#webapps-tab-content").fadeOut();
       $("#ui-tab-content").fadeOut();
     }
 
-  // https://michalsnik.github.io/aos/
+  // initializing Animate On Scroll library with parameter of disabel for mobile screen sizes.
   AOS.init({
     disable: 'mobile'
   });
